@@ -29,7 +29,7 @@ const Blog = () => {
         <Header />
 
         {blogItems.map(({ path, title, subtitle, image }) => (
-          <Link href={`/work/${path}`}>
+          <Link href={`/blog/${path}`}>
             <div className={styles.item}>
               <div className={styles.card}>
                 <h3>{title} &rarr;</h3>

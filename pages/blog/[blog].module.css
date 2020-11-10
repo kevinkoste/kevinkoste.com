@@ -17,19 +17,23 @@
   grid-column: 2;
 }
 
-.fullbleed {
+.content {
+  display: flex;
+  flex-direction: column;
+  /* style applied to innerHtml */
+}
+
+.content img {
+  /* 'fullbleed' style applied to img tags inside innerHtml */
   display: flex;
   justify-content: center;
   width: 100%;
   grid-column: 1 / 4;
-}
-
-.image {
   margin: 1rem 2rem;
 }
 
 @media (max-width: 600px) {
-  .fullbleed {
+  .content img {
     flex-direction: column;
   }
 }

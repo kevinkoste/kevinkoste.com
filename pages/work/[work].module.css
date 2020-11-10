@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(60ch, 100%)
+    1fr;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* style applied to innerHtml */
+}
+
+.content img {
+  /* 'fullbleed' style applied to img tags inside innerHtml */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  grid-column: 1 / 4;
+  margin: 1rem 2rem;
+}
+
+@media (max-width: 600px) {
+  .content img {
+    flex-direction: column;
+  }
+}
