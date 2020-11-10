@@ -2,19 +2,28 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Page, Head, Header, Footer } from '../../components/Base'
-
 import styles from './index.module.css'
 
-const Blog = () => {
-  const blogItems = [
+const Work = () => {
+  const workItems = [
     {
-      path: 'auth',
-      title: 'Authentication: A Horror Story',
-      subtitle: 'Seemingly endless troubles for an auth noob',
+      path: 'virgil-app',
+      title: 'Virgil Mobile App',
+      subtitle: 'An experiment with high-engagement fintech',
       image: {
-        path: 'auth.png',
-        x: 1000,
-        y: 713,
+        path: 'virgil/mobile-app.png',
+        x: 1302,
+        y: 759,
+      },
+    },
+    {
+      path: 'virgil-landing-page',
+      title: 'virgilcard.com',
+      subtitle: 'Landing page for a consumer charge card',
+      image: {
+        path: 'virgil/website-1.png',
+        x: 1302,
+        y: 759,
       },
     },
   ]
@@ -28,7 +37,7 @@ const Blog = () => {
       <main className={styles.main}>
         <Header />
 
-        {blogItems.map(({ path, title, subtitle, image }) => (
+        {workItems.map(({ path, title, subtitle, image }) => (
           <Link href={`/work/${path}`}>
             <div className={styles.item}>
               <div className={styles.card}>
@@ -53,4 +62,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Work
