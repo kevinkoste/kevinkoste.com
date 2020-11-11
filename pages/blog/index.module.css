@@ -53,9 +53,6 @@
 }
 
 @media (max-width: 600px) {
-  .container {
-    padding: 0 1rem;
-  }
   .item {
     display: flex;
     flex-direction: column-reverse;

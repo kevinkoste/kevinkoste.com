@@ -46,7 +46,7 @@ const Work = () => {
               </div>
               <div className={styles.image}>
                 <Image
-                  src={`/assets/${image.path}`}
+                  src={image.path}
                   alt="Screenshot of virgil website 1"
                   width={image.x}
                   height={image.y}

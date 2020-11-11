@@ -2,9 +2,9 @@
 slug: 'auth'
 title: 'Authentication: A Horror Story'
 excerpt: 'Seemingly endless troubles for an auth noob'
-image: '/assets/blog/auth.png'
-imageX: 1302
-imageY: 759
+image: '/blog/auth-1-white.png'
+imageX: 1440
+imageY: 900
 date: 'November 10, 2020'
 ---
 

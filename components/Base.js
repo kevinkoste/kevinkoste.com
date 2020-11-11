@@ -72,9 +72,9 @@ export const Header = () => {
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.creditbar}>
+      <div>
         <img
-          src="/assets/icons/Headshot.png"
+          src="/icons/Headshot.png"
           alt="Headshot"
           className={styles.headshot}
         />
@@ -82,14 +82,14 @@ export const Footer = () => {
           © Kevin Koste<br></br>2020 🚀
         </p>
       </div>
-      <div className={styles.linkbar}>
+      <div>
         <a
           href="https://github.com/kevinkoste"
           target="_blank"
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/icons/Github.svg"
+            src="/icons/Github.svg"
             alt="GitHub Logo"
             className={styles.logo}
           />
@@ -100,7 +100,7 @@ export const Footer = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="/assets/icons/Linkedin.svg"
+            src="/icons/Linkedin.svg"
             alt="LinkedIn Logo"
             className={styles.logo}
           />
@@ -110,11 +110,7 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src="/assets/icons/Mail.svg"
-            alt="Email Logo"
-            className={styles.logo}
-          />
+          <img src="/icons/Mail.svg" alt="Email Logo" className={styles.logo} />
         </a>
       </div>
     </footer>

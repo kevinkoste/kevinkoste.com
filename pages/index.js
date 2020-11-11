@@ -30,14 +30,12 @@ const Home = ({ workItems, blogItems }) => {
                   <h3>{metadata.title} &rarr;</h3>
                   <p>{metadata.excerpt}</p>
                 </div>
-                <div className={styles.image}>
-                  <Image
-                    src={metadata.image}
-                    alt={metadata.slug}
-                    width={metadata.imageX}
-                    height={metadata.imageY}
-                  />
-                </div>
+                <Image
+                  src={metadata.image}
+                  alt={metadata.slug}
+                  width={metadata.imageX}
+                  height={metadata.imageY}
+                />
               </div>
             </Link>
           ))}
@@ -52,14 +50,12 @@ const Home = ({ workItems, blogItems }) => {
                   <h3>{metadata.title} &rarr;</h3>
                   <p>{metadata.excerpt}</p>
                 </div>
-                <div className={styles.image}>
-                  <Image
-                    src={metadata.image}
-                    alt={metadata.slug}
-                    width={metadata.imageX}
-                    height={metadata.imageY}
-                  />
-                </div>
+                <Image
+                  src={metadata.image}
+                  alt={metadata.slug}
+                  width={metadata.imageX}
+                  height={metadata.imageY}
+                />
               </div>
             </Link>
           ))}

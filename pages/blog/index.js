@@ -37,8 +37,8 @@ const Blog = () => {
               </div>
               <div className={styles.image}>
                 <Image
-                  src={`/assets/${image.path}`}
-                  alt="Screenshot of virgil website 1"
+                  src={image.path}
+                  alt={'test'}
                   width={image.x}
                   height={image.y}
                 />
