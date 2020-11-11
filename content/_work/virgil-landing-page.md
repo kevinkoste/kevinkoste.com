@@ -2,7 +2,7 @@
 slug: 'virgil-landing-page'
 title: 'virgilcard.com'
 excerpt: 'Landing page for a consumer charge card'
-image: '/work/virgil-web-1-white.png'
+image: '/_work/virgil-web-1-white.png'
 imageX: 1440
 imageY: 900
 date: 'May 15, 2020'
