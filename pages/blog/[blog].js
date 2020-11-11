@@ -27,7 +27,7 @@ const Blog = ({ metadata, html }) => {
 }
 
 export async function getStaticProps({ params }) {
-  const { metadata, content } = getItemBySlug('_blog', params.blog)
+  const { metadata, content } = getItemBySlug('content/_blog', params.blog)
   const html = await markdownToHtml(content || '')
 
   return {
@@ -39,7 +39,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const items = getAllItems('_blog')
+  const items = getAllItems('content/_blog')
 
   return {
     paths: items.map((item) => '/blog/' + item.metadata.slug),

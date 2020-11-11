@@ -27,7 +27,7 @@ const Work = ({ metadata, html }) => {
 }
 
 export async function getStaticProps({ params }) {
-  const { metadata, content } = getItemBySlug('_work', params.work)
+  const { metadata, content } = getItemBySlug('content/_work', params.work)
   const html = await markdownToHtml(content || '')
 
   return {
@@ -39,7 +39,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const items = getAllItems('_work')
+  const items = getAllItems('content/_work')
 
   return {
     paths: items.map((item) => '/work/' + item.metadata.slug),

@@ -2,32 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Page, Head, Header, Footer } from '../../components/Base'
+import { getAllItems } from '../../lib/markdown'
 import styles from './index.module.css'
 
-const Work = () => {
-  const workItems = [
-    {
-      path: 'virgil-app',
-      title: 'Virgil Mobile App',
-      subtitle: 'An experiment with high-engagement fintech',
-      image: {
-        path: 'virgil/mobile-app.png',
-        x: 1302,
-        y: 759,
-      },
-    },
-    {
-      path: 'virgil-landing-page',
-      title: 'virgilcard.com',
-      subtitle: 'Landing page for a consumer charge card',
-      image: {
-        path: 'virgil/website-1.png',
-        x: 1302,
-        y: 759,
-      },
-    },
-  ]
-
+const Work = ({ workItems }) => {
   return (
     <Page>
       <Head>
@@ -37,19 +15,19 @@ const Work = () => {
       <main className={styles.main}>
         <Header />
 
-        {workItems.map(({ path, title, subtitle, image }) => (
-          <Link href={`/work/${path}`}>
+        {workItems.slice(0, 2).map(({ metadata }, idx) => (
+          <Link href={`/work/${metadata.slug}`} key={idx}>
             <div className={styles.item}>
               <div className={styles.card}>
-                <h3>{title} &rarr;</h3>
-                <p>{subtitle}</p>
+                <h3>{metadata.title} &rarr;</h3>
+                <p>{metadata.excerpt}</p>
               </div>
               <div className={styles.image}>
                 <Image
-                  src={image.path}
-                  alt="Screenshot of virgil website 1"
-                  width={image.x}
-                  height={image.y}
+                  src={metadata.image}
+                  alt={metadata.slug}
+                  width={metadata.imageX}
+                  height={metadata.imageY}
                 />
               </div>
             </div>
@@ -60,6 +38,14 @@ const Work = () => {
       <Footer />
     </Page>
   )
+}
+
+export async function getStaticProps() {
+  const workItems = getAllItems('content/_work')
+
+  return {
+    props: { workItems },
+  }
 }
 
 export default Work

@@ -2,23 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { Page, Head, Header, Footer } from '../../components/Base'
-
+import { getAllItems } from '../../lib/markdown'
 import styles from './index.module.css'
 
-const Blog = () => {
-  const blogItems = [
-    {
-      path: 'auth',
-      title: 'Authentication: A Horror Story',
-      subtitle: 'Seemingly endless troubles for an auth noob',
-      image: {
-        path: 'auth.png',
-        x: 1000,
-        y: 713,
-      },
-    },
-  ]
-
+const Blog = ({ blogItems }) => {
   return (
     <Page>
       <Head>
@@ -28,19 +15,19 @@ const Blog = () => {
       <main className={styles.main}>
         <Header />
 
-        {blogItems.map(({ path, title, subtitle, image }) => (
-          <Link href={`/blog/${path}`}>
+        {blogItems.slice(0, 2).map(({ metadata }, idx) => (
+          <Link href={`/blog/${metadata.slug}`} key={idx}>
             <div className={styles.item}>
               <div className={styles.card}>
-                <h3>{title} &rarr;</h3>
-                <p>{subtitle}</p>
+                <h3>{metadata.title} &rarr;</h3>
+                <p>{metadata.excerpt}</p>
               </div>
               <div className={styles.image}>
                 <Image
-                  src={image.path}
-                  alt={'test'}
-                  width={image.x}
-                  height={image.y}
+                  src={metadata.image}
+                  alt={metadata.slug}
+                  width={metadata.imageX}
+                  height={metadata.imageY}
                 />
               </div>
             </div>
@@ -51,6 +38,14 @@ const Blog = () => {
       <Footer />
     </Page>
   )
+}
+
+export async function getStaticProps() {
+  const blogItems = getAllItems('content/_blog')
+
+  return {
+    props: { blogItems },
+  }
 }
 
 export default Blog

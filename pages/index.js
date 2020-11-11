@@ -68,8 +68,8 @@ const Home = ({ workItems, blogItems }) => {
 }
 
 export async function getStaticProps() {
-  const blogItems = getAllItems('_blog')
-  const workItems = getAllItems('_work')
+  const blogItems = getAllItems('content/_blog')
+  const workItems = getAllItems('content/_work')
 
   return {
     props: { blogItems, workItems },
