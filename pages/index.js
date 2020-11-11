@@ -21,7 +21,7 @@ const Home = ({ workItems, blogItems }) => {
           <h2>At night: building consumer software 🔨🔨🔨</h2>
         </div>
 
-        <h1 style={{ width: '100%' }}>Work</h1>
+        <h1>Work</h1>
         <div className={styles.content}>
           {workItems.slice(0, 2).map(({ metadata }, idx) => (
             <Link href={`/work/${metadata.slug}`} key={idx}>
@@ -43,7 +43,7 @@ const Home = ({ workItems, blogItems }) => {
           ))}
         </div>
 
-        <h1 style={{ width: '100%' }}>Blog</h1>
+        <h1>Blog</h1>
         <div className={styles.content}>
           {blogItems.slice(0, 2).map(({ metadata }, idx) => (
             <Link href={`/blog/${metadata.slug}`} key={idx}>

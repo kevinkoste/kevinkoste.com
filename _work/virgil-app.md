@@ -2,7 +2,7 @@
 slug: 'virgil-app'
 title: 'Virgil Mobile App'
 excerpt: 'An experiment with high-engagement fintech'
-image: '/assets/virgil/mobile-app.png'
+image: '/assets/work/mobile-app.png'
 imageX: 1302
 imageY: 759
 date: 'April 12, 2020'
