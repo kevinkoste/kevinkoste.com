@@ -25,9 +25,13 @@ const Home = ({ workItems, blogItems }) => {
         <Header />
 
         <div className={styles.headline}>
-          <h2>Energy market analyst @ SCE ⚡️⚡️⚡️</h2>
-          <br></br>
-          <h2>At night: building consumer software 🔨🔨🔨</h2>
+          <h2>
+            Day &rarr; building a reliable & cost-effective electric grid for
+            California @ SCE ⚡️ ⚡️ ⚡️
+            <br></br>
+            <br></br>
+            Night &rarr; building consumer software 🔨 🔨 🔨
+          </h2>
         </div>
 
         <h1>Work</h1>

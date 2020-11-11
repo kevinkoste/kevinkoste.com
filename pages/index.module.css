@@ -8,19 +8,19 @@
   width: 100%;
 }
 
-.main h2 {
-  width: 100%;
-  text-align: left;
-  font-weight: unset;
-  margin: 0;
-}
-
 .headline {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  min-height: 200px;
+  width: 52ch;
+  min-height: 350px;
+}
+
+.headline h2 {
+  text-align: left;
+  font-weight: unset;
+  margin: 0;
+  line-height: 2rem;
 }
 
 .content {
@@ -69,6 +69,7 @@
 
 @media (max-width: 600px) {
   .headline {
+    width: 100%;
     min-height: 60vh;
   }
   .content {
