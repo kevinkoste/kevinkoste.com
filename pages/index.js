@@ -5,6 +5,15 @@ import { Page, Head, Header, Footer } from '../components/Base'
 import { getAllItems } from '../lib/markdown'
 import styles from './index.module.css'
 
+export async function getStaticProps() {
+  const blogItems = getAllItems('content/_blog')
+  const workItems = getAllItems('content/_work')
+
+  return {
+    props: { blogItems, workItems },
+  }
+}
+
 const Home = ({ workItems, blogItems }) => {
   return (
     <Page>
@@ -35,6 +44,7 @@ const Home = ({ workItems, blogItems }) => {
                   alt={metadata.slug}
                   width={metadata.imageX}
                   height={metadata.imageY}
+                  unoptimized
                 />
               </div>
             </Link>
@@ -55,6 +65,7 @@ const Home = ({ workItems, blogItems }) => {
                   alt={metadata.slug}
                   width={metadata.imageX}
                   height={metadata.imageY}
+                  unoptimized
                 />
               </div>
             </Link>
@@ -65,15 +76,6 @@ const Home = ({ workItems, blogItems }) => {
       <Footer />
     </Page>
   )
-}
-
-export async function getStaticProps() {
-  const blogItems = getAllItems('content/_blog')
-  const workItems = getAllItems('content/_work')
-
-  return {
-    props: { blogItems, workItems },
-  }
 }
 
 export default Home

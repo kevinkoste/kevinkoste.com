@@ -14,20 +14,33 @@ export const Head = ({ children }) => {
         rel="apple-touch-icon"
         sizes="180x180"
         href="/favicon/apple-touch-icon.png"
+        crossOrigin="anonymous"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
         href="/favicon/favicon-32x32.png"
+        crossOrigin="anonymous"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
         href="/favicon/favicon-16x16.png"
+        crossOrigin="anonymous"
       />
-      <link rel="manifest" href="/favicon/site.webmanifest" />
+      <link
+        rel="manifest"
+        href="/favicon/site.webmanifest"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        href="/fonts/Inter-Regular-slnt=0.ttf"
+        as="font"
+        crossOrigin="anonymous"
+      />
       {children}
     </NextHead>
   )

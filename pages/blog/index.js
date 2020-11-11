@@ -5,6 +5,14 @@ import { Page, Head, Header, Footer } from '../../components/Base'
 import { getAllItems } from '../../lib/markdown'
 import styles from './index.module.css'
 
+export async function getStaticProps() {
+  const blogItems = getAllItems('content/_blog')
+
+  return {
+    props: { blogItems },
+  }
+}
+
 const Blog = ({ blogItems }) => {
   return (
     <Page>
@@ -38,14 +46,6 @@ const Blog = ({ blogItems }) => {
       <Footer />
     </Page>
   )
-}
-
-export async function getStaticProps() {
-  const blogItems = getAllItems('content/_blog')
-
-  return {
-    props: { blogItems },
-  }
 }
 
 export default Blog

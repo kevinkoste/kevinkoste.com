@@ -5,6 +5,14 @@ import { Page, Head, Header, Footer } from '../../components/Base'
 import { getAllItems } from '../../lib/markdown'
 import styles from './index.module.css'
 
+export async function getStaticProps() {
+  const workItems = getAllItems('content/_work')
+
+  return {
+    props: { workItems },
+  }
+}
+
 const Work = ({ workItems }) => {
   return (
     <Page>
@@ -38,14 +46,6 @@ const Work = ({ workItems }) => {
       <Footer />
     </Page>
   )
-}
-
-export async function getStaticProps() {
-  const workItems = getAllItems('content/_work')
-
-  return {
-    props: { workItems },
-  }
 }
 
 export default Work
