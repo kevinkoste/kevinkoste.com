@@ -68,6 +68,9 @@
 }
 
 @media (max-width: 600px) {
+  .headline {
+    min-height: 60vh;
+  }
   .content {
     flex-direction: column;
     justify-content: space-between;
@@ -75,6 +78,7 @@
   .item {
     width: 100%;
     margin-top: 1rem;
+    margin-bottom: 3rem;
   }
   .image {
     margin-top: 1rem;

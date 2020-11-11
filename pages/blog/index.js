@@ -36,6 +36,7 @@ const Blog = ({ blogItems }) => {
                   alt={metadata.slug}
                   width={metadata.imageX}
                   height={metadata.imageY}
+                  unoptimized
                 />
               </div>
             </div>
