@@ -84,6 +84,8 @@ export const Footer = () => {
           src="/icons/Headshot.png"
           alt="Headshot"
           className={styles.headshot}
+          height="60px"
+          width="60px"
         />
         <p>
           © Kevin Koste<br></br>2020 🚀
@@ -99,6 +101,8 @@ export const Footer = () => {
             src="/icons/Github.svg"
             alt="GitHub Logo"
             className={styles.logo}
+            height="30px"
+            width="30px"
           />
         </a>
         <a
@@ -110,6 +114,8 @@ export const Footer = () => {
             src="/icons/Linkedin.svg"
             alt="LinkedIn Logo"
             className={styles.logo}
+            height="30px"
+            width="30px"
           />
         </a>
         <a
@@ -117,7 +123,13 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/icons/Mail.svg" alt="Email Logo" className={styles.logo} />
+          <img
+            src="/icons/Mail.svg"
+            alt="Email Logo"
+            className={styles.logo}
+            height="30px"
+            width="30px"
+          />
         </a>
       </div>
     </footer>
