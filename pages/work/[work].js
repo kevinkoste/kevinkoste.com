@@ -1,4 +1,5 @@
-import { Page, Head, Header, Footer } from '../../components/Base'
+import Head from 'next/head'
+import { Page, Header, Footer } from '../../components/Base'
 import { getItemBySlug, getAllItems, markdownToHtml } from '../../lib/markdown'
 import styles from './[work].module.css'
 

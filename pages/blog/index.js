@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { Page, Head, Header, Footer } from '../../components/Base'
+import Head from 'next/head'
+import { Page, Header, Footer } from '../../components/Base'
 import { getAllItems } from '../../lib/markdown'
 import styles from './index.module.css'
 
