@@ -10,11 +10,11 @@ const App = ({ Component, pageProps }) => {
   useEffect(() => {
     // Initialize Fathom when the app loads
     Fathom.load('ECJIK', {
+      url: './tracker.js',
       includedDomains: ['kevinkoste.com'],
-      url: 'https://fathom-6xg9.onrender.com/tracker.js',
     })
 
-    console.log('in fathom loader')
+    console.log('in fathom loader, window.fathom is:', window.fathom)
 
     const onRouteChangeComplete = () => {
       Fathom.trackPageview()
@@ -26,7 +26,7 @@ const App = ({ Component, pageProps }) => {
     return () => {
       router.events.off('routeChangeComplete', onRouteChangeComplete)
     }
-  }, [])
+  }, [router])
 
   return <Component {...pageProps} />
 }
