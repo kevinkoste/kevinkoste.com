@@ -27,7 +27,11 @@ const Work = ({ metadata, html }) => {
   return (
     <Page>
       <Head>
-        <title>Kevin Koste</title>
+        <title>{'Kevin Koste - ' + metadata.title}</title>
+        <meta
+          name="description"
+          content={metadata.title + ': ' + metadata.excerpt}
+        />
       </Head>
 
       <main className={styles.main}>

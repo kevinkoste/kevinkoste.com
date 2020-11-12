@@ -19,6 +19,10 @@ const Home = ({ workItems, blogItems }) => {
     <Page>
       <Head>
         <title>Kevin Koste</title>
+        <meta
+          name="description"
+          content="Kevin Koste's personal portfolio and blog"
+        />
       </Head>
 
       <main className={styles.main}>

@@ -17,7 +17,8 @@ const Blog = ({ blogItems }) => {
   return (
     <Page>
       <Head>
-        <title>Kevin Koste</title>
+        <title>{'Kevin Koste - Work'}</title>
+        <meta name="description" content={blogItems[0]} />
       </Head>
 
       <main className={styles.main}>
