@@ -33,13 +33,10 @@ const Work = ({ metadata, html }) => {
       <main className={styles.main}>
         <Header />
 
-        <div className={styles.wrapper}>
-          <h4>{metadata.date}</h4>
-          <div
-            className={styles.content}
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
+        <div
+          className={styles.wrapper}
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </main>
 
       <Footer />

@@ -48,35 +48,25 @@ export const Head = ({ children }) => {
 
 export const Header = () => {
   const router = useRouter()
-
   return (
     <header className={styles.header}>
       <Link href="/">
         <a>Kevin Koste</a>
       </Link>
       <div className={styles.navbar}>
-        <Link href="/work">
-          <a
-            style={{
-              textDecoration: router.pathname.startsWith('/work')
-                ? 'underline'
-                : 'unset',
-            }}
-          >
-            Work
-          </a>
-        </Link>
-        <Link href="/blog">
-          <a
-            style={{
-              textDecoration: router.pathname.startsWith('/blog')
-                ? 'underline'
-                : 'unset',
-            }}
-          >
-            Blog
-          </a>
-        </Link>
+        {['work', 'blog'].map((value) => (
+          <Link href={`/${value}`}>
+            <a
+              style={{
+                borderBottom: router.pathname.startsWith(`/${value}`)
+                  ? '1px solid'
+                  : '',
+              }}
+            >
+              {value}
+            </a>
+          </Link>
+        ))}
       </div>
     </header>
   )

@@ -9,31 +9,63 @@
   display: grid;
   grid-template-columns:
     1fr
-    min(60ch, 100%)
+    1fr
+    min(30ch, 50%)
+    min(30ch, 50%)
+    1fr
     1fr;
 }
 
 .wrapper > * {
-  grid-column: 2;
+  grid-column: 3 / 5;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  /* style applied to innerHtml */
+/* style automatically-generated elements below */
+
+.wrapper p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
 }
 
-.content img {
-  /* 'fullbleed' style applied to img tags inside innerHtml */
-  display: flex;
-  justify-content: center;
+.wrapper ul {
+  padding-left: 1.3rem;
+  margin-bottom: 0;
+}
+
+.wrapper ul li {
+  padding-left: 0.2rem;
+  padding-bottom: 1rem;
+}
+
+.wrapper ol {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.wrapper ol li {
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.wrapper img {
+  grid-column: 2 / 6;
   width: 100%;
-  grid-column: 1 / 4;
-  margin: 1rem 2rem;
+  margin: 2rem 0;
+}
+
+.wrapper a {
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.wrapper a:hover,
+.wrapper a:active {
+  color: #0070f3;
+  border-color: #0070f3;
 }
 
 @media (max-width: 600px) {
-  .content img {
-    flex-direction: column;
+  .wrapper img {
+    grid-column: 3 / 5;
   }
 }
