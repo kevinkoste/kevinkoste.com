@@ -13,6 +13,7 @@ body {
   font-weight: normal;
   font-style: normal;
   src: local('inter'), url('/fonts/Inter-Regular-slnt=0.ttf') format('truetype');
+  font-display: swap;
 }
 
 a {

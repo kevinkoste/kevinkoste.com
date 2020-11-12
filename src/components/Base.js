@@ -1,4 +1,3 @@
-import NextHead from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './Base.module.css'
@@ -6,15 +5,6 @@ import styles from './Base.module.css'
 export const Page = ({ children }) => {
   return <div className={styles.container}>{children}</div>
 }
-
-// export const Head = ({ children }) => {
-//   return (
-//     <NextHead>
-
-//       {children}
-//     </NextHead>
-//   )
-// }
 
 export const Header = () => {
   const router = useRouter()
