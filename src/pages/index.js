@@ -53,7 +53,7 @@ const Home = ({ workItems, blogItems }) => {
                   alt={metadata.slug}
                   width={metadata.imageX}
                   height={metadata.imageY}
-                  // unoptimized
+                  unoptimized
                 />
               </div>
             </Link>
@@ -74,7 +74,7 @@ const Home = ({ workItems, blogItems }) => {
                   alt={metadata.slug}
                   width={metadata.imageX}
                   height={metadata.imageY}
-                  // unoptimized
+                  unoptimized
                 />
               </div>
             </Link>
