@@ -56,9 +56,8 @@
   transition: color 0.15s ease, border 0.15s ease;
 }
 
-.card h3 {
+.card h2 {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
 }
 
 .card p {

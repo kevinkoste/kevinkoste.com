@@ -40,7 +40,7 @@ const Home = ({ workItems, blogItems }) => {
             <Link href={`/work/${metadata.slug}`} key={idx}>
               <div className={styles.item}>
                 <div className={styles.card}>
-                  <h3>{metadata.title} &rarr;</h3>
+                  <h2>{metadata.title} &rarr;</h2>
                   <p>{metadata.excerpt}</p>
                 </div>
                 <Image
@@ -61,7 +61,7 @@ const Home = ({ workItems, blogItems }) => {
             <Link href={`/blog/${metadata.slug}`} key={idx}>
               <div className={styles.item}>
                 <div className={styles.card}>
-                  <h3>{metadata.title} &rarr;</h3>
+                  <h2>{metadata.title} &rarr;</h2>
                   <p>{metadata.excerpt}</p>
                 </div>
                 <Image

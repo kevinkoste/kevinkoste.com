@@ -10,6 +10,10 @@ export const Page = ({ children }) => {
 export const Head = ({ children }) => {
   return (
     <NextHead>
+      <meta
+        name="Kevin Koste's website"
+        content="Kevin Koste personal portfolio and blog"
+      />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
