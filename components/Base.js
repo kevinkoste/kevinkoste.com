@@ -54,8 +54,8 @@ export const Header = () => {
         <a>Kevin Koste</a>
       </Link>
       <div className={styles.navbar}>
-        {['work', 'blog'].map((value) => (
-          <Link href={`/${value}`}>
+        {['work', 'blog'].map((value, idx) => (
+          <Link href={`/${value}`} key={idx}>
             <a
               style={{
                 borderBottom: router.pathname.startsWith(`/${value}`)

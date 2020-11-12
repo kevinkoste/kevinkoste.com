@@ -4,16 +4,19 @@ import * as Fathom from 'fathom-client'
 
 import './_app.css'
 
-const MyApp = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }) => {
   const router = useRouter()
 
   useEffect(() => {
     // Initialize Fathom when the app loads
     Fathom.load('ECJIK', {
       includedDomains: ['kevinkoste.com'],
+      url: 'https://fathom-6xg9.onrender.com/tracker.js',
     })
 
-    function onRouteChangeComplete() {
+    console.log('in fathom loader')
+
+    const onRouteChangeComplete = () => {
       Fathom.trackPageview()
     }
     // Record a pageview when route changes
@@ -28,4 +31,4 @@ const MyApp = ({ Component, pageProps }) => {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default App
