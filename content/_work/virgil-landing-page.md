@@ -1,42 +1,42 @@
 ---
-slug: 'virgil-landing-page'
-title: 'virgilcard.com'
-excerpt: 'Landing page for a consumer charge card'
-image: '/_work/virgil-web-3.png'
+slug: 'virgil'
+title: 'Virgil'
+excerpt: 'A consumer credit card concept'
+image: '/_work/virgil-app-1.png'
 imageX: 1440
 imageY: 900
-date: 'May 15, 2020'
+date: 'November 12, 2020'
 ---
 
-## Virgil
+# Virgil
 
-In January 2020, I teamed up with two friends to build a consumer credit card company.
+In January 2020, I teamed up with two friends to build a consumer credit card company that offered a engaging spending experience. This post is about the products we built and our marketing efforts. You can read more about our research and motivation here -> [__High Engagement Fintech__](/blog/high-engagement-fintech)
 
-Skip to ->
+## Mobile App
 
-1. [Problem](#problem)
-2. [Product](#product)
-3. [Engineering](#engineering)
+Virgil's primary customer-facing product was a high-engagement mobile credit card app. We interviewed dozens of potential customers, and the results of these interviews informed the design, layout, and navigation of the app. Specifically, we learned that folks wanted 
+
+Alongside customer interviews, we took a close look at the navigation patterns in successful personal finance apps like Clarity Money, Truebill & Robinhood.
+
+![Image of Virgil App 1](/_work/virgil-app-1.png)
+
+### Stack
+- React Native
+- Node.js
+- Postgres
+- AWS (VPC, RDS, EC2)
+
+I built the app with React Native supported by a Node server. After a successful Plaid Link flow on the frontend, the backend used the access token to fetch transation data via Plaid's API, then wrote it to the database. That was it for the server. The vast majority of the work on this product was the React Native app. The learning curve was very steep - I was (re)learning JavaScript and React fundamentals as I went along.
+
+I made a number of mistakes while building this product. For example, it was absolutely overkill to self-manage a VPC on AWS. I was very eager to take on the compliance challenges of working with financial data, but it made little sense for this demo. Today, I would probably deploy the Node server to Heroku and use SQLite or maybe MongoDB Atlas as the data store. With that said, I gained valuable experience by diving headfirst into AWS, and I'm ultimately glad that I did.
+
+![Image of Virgil App 2](/_work/virgil-app-2.png)
+
+![Image of Virgil App 3](/_work/virgil-app-3.png)
+
+## Landing Page
 
 ![Image of Virgil Landing Page 1](/_work/virgil-web-1.png)
-
-## Problem
-
-We learned that the traditional barriers to entry for card issuing were falling thanks to financial infrastructure companies like Synapse, Marqeta, i2c, and Galileo.
-
-Card companies have two sources of revenue - fees, which include interest charges, annual fees and late fees; and interchange, which is the ~2-3% of spending that the card company gets from the merchant on every swipe.
-
-Most card programs are designed to maximize one of these revenue streams. 62% of American Express's revenue comes from interchange. Discover generates only 8.3% of their revenue from interchange - the rest is from fees. Capital One middles at 17%. [[source]](https://www.valuepenguin.com/how-do-credit-card-companies-make-money)
-
-It follows that there are two business models for a card company.
-1. Fees - target low-income consumers (credit score < 650), advertise access to credit 
-2. Interchange - target high-income consumers (credit score > 750), advertise rewards 
-
-There are many fintech startups building for the low-income market, often with an alternative underwriting strategy/model. We decided to focus on the high-income market.
-
-## Product
-
-To-do
 
 ![Image of Virgil Landing Page 2](/_work/virgil-web-2.png)
 
@@ -46,5 +46,6 @@ To-do
 
 ## Engineering
 
-To-do
+<!-- ## Brand
 
+We drew some inspiration for the brand from Co-Star & Mr. Porter - but the name comes from Dante's guide through the Inferno. -->

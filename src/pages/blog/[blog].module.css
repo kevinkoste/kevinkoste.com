@@ -23,26 +23,32 @@
 /* style automatically-generated elements below */
 
 .wrapper p {
-  margin-bottom: 0.5rem;
   line-height: 1.5rem;
+  margin: 0 0 1rem 0;
 }
 
 .wrapper ul {
   padding-left: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
 .wrapper ul li {
+  line-height: 1.5rem;
   padding-left: 0.2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
 }
 
 .wrapper ol {
   padding-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
 .wrapper ol li {
+  line-height: 1.5rem;
   padding-left: 0.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
 }
 
 .wrapper img {
