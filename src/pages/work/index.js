@@ -25,7 +25,7 @@ const Work = ({ workItems }) => {
       <main className={styles.main}>
         <Header />
 
-        {workItems.slice(0, 2).map(({ metadata }, idx) => (
+        {workItems.map(({ metadata }, idx) => (
           <Link href={`/work/${metadata.slug}`} key={idx}>
             <div className={styles.item}>
               <div className={styles.card}>

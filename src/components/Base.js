@@ -44,7 +44,7 @@ export const Footer = () => {
           width="60px"
         />
         <p>
-          © Kevin Koste<br></br>2020 🚀
+          © Kevin Koste<br></br>2020
         </p>
       </div>
       <div>

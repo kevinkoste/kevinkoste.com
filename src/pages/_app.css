@@ -25,3 +25,7 @@ a {
   box-sizing: border-box;
   font-family: 'inter';
 }
+
+* ::selection {
+  background: #e0b312;
+}

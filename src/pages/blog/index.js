@@ -25,7 +25,7 @@ const Blog = ({ blogItems }) => {
       <main className={styles.main}>
         <Header />
 
-        {blogItems.slice(0, 2).map(({ metadata }, idx) => (
+        {blogItems.map(({ metadata }, idx) => (
           <Link href={`/blog/${metadata.slug}`} key={idx}>
             <div className={styles.item}>
               <div className={styles.card}>

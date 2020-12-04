@@ -26,20 +26,22 @@ const Home = ({ workItems, blogItems }) => {
         />
       </Head>
 
-      <main className={styles.main}>
-        <Header />
+      <Header />
 
+      <main className={styles.main}>
         <div className={styles.headline}>
           <h2>
-            Day &rarr; building a reliable & cost-effective electric grid for
-            California @ SCE ⚡️ ⚡️ ⚡️
+            Day &rarr; building a reliable & cost-effective electric grid at
+            SoCal Edison ⚡️ ⚡️ ⚡️
             <br></br>
             <br></br>
             Night &rarr; building consumer software 🔨 🔨 🔨
           </h2>
         </div>
 
-        <h1>Work</h1>
+        <Link href={`/work`}>
+          <h1>Work</h1>
+        </Link>
         <div className={styles.content}>
           {workItems.slice(0, 2).map(({ metadata }, idx) => (
             <Link href={`/work/${metadata.slug}`} key={idx}>
@@ -53,6 +55,7 @@ const Home = ({ workItems, blogItems }) => {
                   alt={metadata.slug}
                   width={metadata.imageX}
                   height={metadata.imageY}
+                  className={styles.image}
                   unoptimized
                 />
               </div>
@@ -60,7 +63,9 @@ const Home = ({ workItems, blogItems }) => {
           ))}
         </div>
 
-        <h1>Blog</h1>
+        <Link href={`/blog`}>
+          <h1>Blog</h1>
+        </Link>
         <div className={styles.content}>
           {blogItems.slice(0, 2).map(({ metadata }, idx) => (
             <Link href={`/blog/${metadata.slug}`} key={idx}>
@@ -74,6 +79,7 @@ const Home = ({ workItems, blogItems }) => {
                   alt={metadata.slug}
                   width={metadata.imageX}
                   height={metadata.imageY}
+                  className={styles.image}
                   unoptimized
                 />
               </div>
