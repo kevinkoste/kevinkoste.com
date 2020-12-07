@@ -12,23 +12,23 @@ date: 'December 2, 2020'
 
 Many young people have an internet identity crisis.
 
-<!-- A handful of people I've spoken to in tech & entertainment have (personal | anonymous | private) Twitter and Instagram accounts, but feel that LinkedIn is too rigid to communicate their (public | professional) identity. This is the problem we scratched at.
+Each social media platform provides the perfect outlet for one or two content categories - images on Instagram, news on Twitter, music & video on TikTok, resumes on LinkedIn, etc. In fact, executing just one category extremely well is a big part of what made these platforms so successful.
 
-Take an example: Dan, a young person working in tech or entertainment who has an inactive Twitter account, a personal/private/anonymous Instagram account, and a LinkedIn profile. For anyone who searches Dan's name, his LinkedIn is the only substantive profile they find. His LinkedIn is effectively a resume - that's fine for random strangers on the internet. But Dan is actually 
+I believe that young professionals (not just "creators") will find it increasingly valuable to build a cohesive and compelling professional internet identity.
 
-I've actually spoken to many of these people!
+I also believe that the social media platforms will fail to serve this need. Here are a couple reasons:
+- The frequency of change in one's internet identity does not create enough fuel for products reliant on engagement (see LinkedIn's news feed)
+- There is little consensus on what content is appropriate & professional on each platform, especially across industries and geographies
 
-Each of these platforms have executed one social media primitive extremely well. But as a result, each profile demonstrates just one facet of your identity.
-
-Some people solve this problem with a personal website. I think the difficulty (and possibly stigma) of building one is still far too great a cost for the people who have this problem. This might change someday. -->
-
-
+In September, two friends and I took a pass at this problem - here's what we built!
 
 ## Product
 
-Corner helps you build a profile to share whatever content is most relevant to your public identity. Your profile can include the content you already publish across the web, and can be accessed from a nice-looking link.
+Corner helps you build a profile to share whatever is most relevant to your public identity. Your profile can include any content you already publish elsewhere on the web, and can be accessed from a nice-looking link.
 
 For the initial product, we designed and built a landing page, an onboarding flow, an "edit profile" page, and a page to browse other profiles - all optimized for mobile web.
+
+We tried to build a small magic moment when the user lands on their profile after onboarding is complete. It was, in reality, a challenge to keep the onboarding quick while collecting enough information to generate an attractive profile.
 
 ## Engineering
 

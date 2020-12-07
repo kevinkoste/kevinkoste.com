@@ -18,13 +18,13 @@ const Blog = ({ blogItems }) => {
   return (
     <Page>
       <Head>
-        <title>{'Kevin Koste - Work'}</title>
+        <title>{'Kevin Koste | Blog'}</title>
         <meta name="description" content={blogItems[0]} />
       </Head>
 
-      <main className={styles.main}>
-        <Header />
+      <Header />
 
+      <main className={styles.main}>
         {blogItems.map(({ metadata }, idx) => (
           <Link href={`/blog/${metadata.slug}`} key={idx}>
             <div className={styles.item}>

@@ -18,13 +18,13 @@ const Work = ({ workItems }) => {
   return (
     <Page>
       <Head>
-        <title>{'Kevin Koste - Work'}</title>
+        <title>{'Kevin Koste | Work'}</title>
         <meta name="description" content={workItems[0]} />
       </Head>
 
-      <main className={styles.main}>
-        <Header />
+      <Header />
 
+      <main className={styles.main}>
         {workItems.map(({ metadata }, idx) => (
           <Link href={`/work/${metadata.slug}`} key={idx}>
             <div className={styles.item}>
