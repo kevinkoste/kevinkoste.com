@@ -68,7 +68,7 @@
   text-align: left;
   border: 1px solid #000000;
   border-radius: 10px;
-  transition: color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .card h2 {
@@ -82,7 +82,7 @@
 }
 
 .image {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 @media (max-width: 600px) {
@@ -96,8 +96,7 @@
   }
   .item {
     width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-top: 1rem 0 3rem 0;
   }
   .image {
     margin-top: 1rem;

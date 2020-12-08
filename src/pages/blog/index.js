@@ -32,15 +32,14 @@ const Blog = ({ blogItems }) => {
                 <h3>{metadata.title} &rarr;</h3>
                 <p>{metadata.excerpt}</p>
               </div>
-              <div className={styles.image}>
-                <Image
-                  src={metadata.image}
-                  alt={metadata.slug}
-                  width={metadata.imageX}
-                  height={metadata.imageY}
-                  unoptimized
-                />
-              </div>
+              <Image
+                src={metadata.image}
+                alt={metadata.slug}
+                width={metadata.imageX}
+                height={metadata.imageY}
+                className={styles.image}
+                unoptimized
+              />
             </div>
           </Link>
         ))}

@@ -1,7 +1,10 @@
 .main {
   display: flex;
-  flex-direction: column;
   flex: 1;
+
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .main h2 {
@@ -13,26 +16,34 @@
 
 .item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: flex-end;
   align-items: flex-start;
+  width: calc(50% - 2rem);
   cursor: pointer;
+  margin: 1rem 0 1rem 0;
 }
 
 .item:hover .card,
 .item:active .card {
   color: #0070f3;
   border-color: #0070f3;
+  transform: scale(0.98) translateY(-2px);
+}
+
+.item:hover .image,
+.item:active .image {
+  transform: scale(0.98) translateY(3px);
 }
 
 .card {
-  flex: 1;
-  margin: 1rem 0;
+  width: 100%;
+  margin: 1.5rem 0;
   padding: 1.5rem;
   text-align: left;
   border: 1px solid #000000;
   border-radius: 10px;
-  transition: color 0.15s ease, border 0.15s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .card h3 {
@@ -47,22 +58,14 @@
 }
 
 .image {
-  width: 50%;
-  margin: 1rem;
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 600px) {
   .item {
-    display: flex;
-    flex-direction: column-reverse;
-    width: unset;
-  }
-  .card {
     width: 100%;
-    margin: 1rem 0;
   }
   .image {
-    width: 100%;
-    margin: 1rem 0 0 0;
+    margin-top: 1rem;
   }
 }
