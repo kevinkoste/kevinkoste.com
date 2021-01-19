@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styles from './Base.module.css'
 
@@ -35,30 +36,29 @@ export const Header = () => {
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div>
-        <img
+      <div className={styles.footerleft}>
+        <Image
           src="/icons/Headshot.png"
           alt="Headshot"
-          className={styles.headshot}
-          height="60px"
-          width="60px"
+          height={52}
+          width={52}
         />
         <p>
-          © Kevin Koste<br></br>2020
+          Kevin Koste<br></br>2021
         </p>
       </div>
-      <div>
+      <div className={styles.footerright}>
         <a
           href="https://github.com/kevinkoste"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src="/icons/Github.svg"
             alt="GitHub Logo"
             className={styles.logo}
-            height="30px"
-            width="30px"
+            height={30}
+            width={30}
           />
         </a>
         <a
@@ -66,12 +66,12 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src="/icons/Linkedin.svg"
             alt="LinkedIn Logo"
             className={styles.logo}
-            height="30px"
-            width="30px"
+            height={30}
+            width={30}
           />
         </a>
         <a
@@ -79,12 +79,12 @@ export const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src="/icons/Mail.svg"
             alt="Email Logo"
             className={styles.logo}
-            height="30px"
-            width="30px"
+            height={30}
+            width={30}
           />
         </a>
       </div>

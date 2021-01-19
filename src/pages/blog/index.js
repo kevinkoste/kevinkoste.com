@@ -38,7 +38,6 @@ const Blog = ({ blogItems }) => {
                 width={metadata.imageX}
                 height={metadata.imageY}
                 className={styles.image}
-                unoptimized
               />
             </div>
           </Link>

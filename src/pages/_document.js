@@ -36,11 +36,15 @@ export default class Document extends NextDocument {
             as="font"
             crossOrigin="anonymous"
           />
+          <script
+            async
+            defer
+            data-domain="kevinkoste.com"
+            src="https://plausible.io/js/plausible.js"
+          ></script>
         </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
+        <Main />
+        <NextScript />
       </Html>
     )
   }

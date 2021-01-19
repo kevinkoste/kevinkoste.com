@@ -31,11 +31,16 @@ const Home = ({ workItems, blogItems }) => {
       <main className={styles.main}>
         <div className={styles.headline}>
           <h2>
-            Day &rarr; building a reliable & cost-effective electric grid at
-            SoCal Edison ⚡️ ⚡️ ⚡️
+            Hi! I'm a full-stack engineer and energy market analyst at Southern
+            California Edison, where I build revenue optimization software for
+            energy storage assets.
             <br></br>
             <br></br>
-            Night &rarr; building consumer software 🔨 🔨 🔨
+            On nights and weekends, I build consumer products & developer tools
+            like Virgil and Blobber.
+            <br></br>
+            <br></br>
+            🔨 ⚡️ 🔨 ⚡️ 🔨 ⚡️
           </h2>
         </div>
 
@@ -43,7 +48,7 @@ const Home = ({ workItems, blogItems }) => {
           <h1>Work</h1>
         </Link>
         <div className={styles.content}>
-          {workItems.slice(0, 2).map(({ metadata }, idx) => (
+          {workItems.map(({ metadata }, idx) => (
             <Link href={`/work/${metadata.slug}`} key={idx}>
               <div className={styles.item}>
                 <div className={styles.card}>
@@ -56,7 +61,6 @@ const Home = ({ workItems, blogItems }) => {
                   width={metadata.imageX}
                   height={metadata.imageY}
                   className={styles.image}
-                  unoptimized
                 />
               </div>
             </Link>
@@ -67,7 +71,7 @@ const Home = ({ workItems, blogItems }) => {
           <h1>Blog</h1>
         </Link>
         <div className={styles.content}>
-          {blogItems.slice(0, 2).map(({ metadata }, idx) => (
+          {blogItems.map(({ metadata }, idx) => (
             <Link href={`/blog/${metadata.slug}`} key={idx}>
               <div className={styles.item}>
                 <div className={styles.card}>
@@ -80,7 +84,6 @@ const Home = ({ workItems, blogItems }) => {
                   width={metadata.imageX}
                   height={metadata.imageY}
                   className={styles.image}
-                  unoptimized
                 />
               </div>
             </Link>

@@ -70,7 +70,7 @@
 
 .footer p {
   flex: 1;
-  padding-left: 0.5rem;
+  padding-left: 0.75rem;
   white-space: nowrap;
 }
 
@@ -78,6 +78,13 @@
   display: flex;
   align-items: center;
   margin: 0;
+}
+
+.footerleft {
+  padding: 10px 0px;
+}
+
+.footerright {
   transform: translateX(0.7rem);
 }
 
@@ -98,6 +105,9 @@
       #2bff88 90%
     );
   }
+  .footerleft {
+    padding: 8px 0px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -107,6 +117,6 @@
     justify-content: unset;
   }
   .footer a {
-    transform: translateX(-0.7rem);
+    transform: translateX(-1.4rem);
   }
 }
